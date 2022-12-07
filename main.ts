@@ -1,0 +1,11 @@
+let strip = neopixel.create(DigitalPin.P0, 12, NeoPixelMode.RGB)
+strip.clear()
+basic.forever(function () {
+    strip.setPixelColor(11, neopixel.rgb(255, 70, 50))
+    strip.setBrightness(randint(25, 255))
+    strip.show()
+    basic.pause(randint(0, 150))
+    strip.setPixelColor(11, neopixel.colors(NeoPixelColors.Black))
+    strip.show()
+    basic.pause(randint(0, 150))
+})
